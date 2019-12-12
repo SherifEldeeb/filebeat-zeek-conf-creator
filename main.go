@@ -90,10 +90,14 @@ func main() {
 
 	ofile, err := os.Create("filebeat.yml")
 	if err != nil {
-		log.Fatal("error creating file:", err)
+		log.Fatal("[!] error creating file:", err)
 	}
 	defer ofile.Close()
 
-	ofile.WriteString(config)
+	n, err := ofile.WriteString(config)
+	if err != nil {
+		log.Fatal("[!] error writing content to file:", err)
+	}
 
+	fmt.Println("[*] successfully created conf file; total bytes written:", n)
 }
