@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+	"os"
+)
 
 var logs = []string{
 	"conn",
@@ -66,7 +70,7 @@ output.kafka:
     escape_html: false
 `
 
-var log = `- type: log
+var logitem = `- type: log
   enabled: true
   paths:
     - /opt/zeek/logs/current/%[1]s.log
@@ -77,8 +81,19 @@ var log = `- type: log
 
 func main() {
 	var AllLogs string
+
 	for _, l := range logs {
-		AllLogs = AllLogs + fmt.Sprintf(log, l)
+		AllLogs = AllLogs + fmt.Sprintf(logitem, l)
 	}
-	fmt.Println(fmt.Sprintf(conf, AllLogs))
+
+	config := fmt.Sprintf(conf, AllLogs)
+
+	ofile, err := os.Create("filebeat.yml")
+	if err != nil {
+		log.Fatal("error creating file:", err)
+	}
+	defer ofile.Close()
+
+	ofile.WriteString(config)
+
 }

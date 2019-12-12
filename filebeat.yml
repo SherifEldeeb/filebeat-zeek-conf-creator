@@ -1,0 +1,359 @@
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/conn.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-conn
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/dce_rpc.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-dce_rpc
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/dhcp.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-dhcp
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/dnp3.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-dnp3
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/dns.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-dns
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/ftp.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-ftp
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/http.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-http
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/irc.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-irc
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/kerberos.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-kerberos
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/modbus.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-modbus
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/modbus_register_change.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-modbus_register_change
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/mysql.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-mysql
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/ntlm.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-ntlm
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/radius.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-radius
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/rdp.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-rdp
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/rfb.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-rfb
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/sip.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-sip
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/smb_cmd.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-smb_cmd
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/smb_files.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-smb_files
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/smb_mapping.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-smb_mapping
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/smtp.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-smtp
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/snmp.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-snmp
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/socks.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-socks
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/ssh.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-ssh
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/ssl.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-ssl
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/syslog.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-syslog
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/tunnel.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-tunnel
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/files.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-files
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/ocsp.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-ocsp
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/pe.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-pe
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/x509.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-x509
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/netcontrol.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-netcontrol
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/netcontrol_drop.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-netcontrol_drop
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/netcontrol_shunt.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-netcontrol_shunt
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/netcontrol_catch_release.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-netcontrol_catch_release
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/openflow.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-openflow
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/intel.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-intel
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/notice.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-notice
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/notice_alarm.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-notice_alarm
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/signatures.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-signatures
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/traceroute.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-traceroute
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/known_certs.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-known_certs
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/known_hosts.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-known_hosts
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/known_modbus.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-known_modbus
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/known_services.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-known_services
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/software.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-software
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/barnyard2.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-barnyard2
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/dpd.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-dpd
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/unified2.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-unified2
+- type: log
+  enabled: true
+  paths:
+    - /opt/zeek/logs/current/weird.log
+  json.keys_under_root: true
+  fields_under_root: true
+  fields.logtype: zeek-weird
+
+output.kafka:
+  enabled: true
+  hosts: ["localhost:9092"]
+  topic: zeek
+  codec.json:
+    pretty: false
+    escape_html: false
