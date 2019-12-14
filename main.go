@@ -61,6 +61,7 @@ var logs = []string{
 
 var conf = `filebeat.inputs:
 %s
+
 output.kafka:
   enabled: true
   hosts: ["localhost:9092"]
@@ -74,8 +75,6 @@ var logitem = `- type: log
   enabled: true
   paths:
     - /opt/zeek/logs/current/%[1]s.log
-  json.keys_under_root: true
-  fields_under_root: true
   fields.logtype: zeek-%[1]s
 `
 
